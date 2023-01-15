@@ -25,7 +25,33 @@ Socket::~Socket()
     }
 }
 
+void Socket::bind( InetAddress *addr )
+{
+    errif( ::bind(fd, (sockaddr*)&addr->addr, addr->addr_len) == -1, "socket bind error");
+}
 
+void Socket::listen()
+{
+    errif( ::listen( fd, SOMAXCONN ) == -1, "socket listen error");
+}
+
+void Socket::setnonblocking()
+{
+    fcntl( fd, F_SETFL, fcntl( fd, F_GETFL ) | O_NONBLOCK);
+}
+
+
+int Socket::accept( InetAddress *addr)
+{
+    int clnt_sockfd = ::accept( fd, (sockaddr*)&addr->addr, &addr->addr_len );
+    errif(clnt_sockfd == -1, "socket accept error");
+    return clnt_sockfd;
+}
+
+int Socket::getFd()
+{
+    return fd;
+}
 
 
 
