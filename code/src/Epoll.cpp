@@ -25,6 +25,7 @@ Epoll::~Epoll()
     delete [] events;
 }
 
+/*
 void Epoll::addFd( int fd, uint32_t op )
 {
     struct epoll_event ev;
@@ -33,6 +34,7 @@ void Epoll::addFd( int fd, uint32_t op )
     ev.events = op;
     errif( epoll_ctl( epfd, EPOLL_CTL_ADD, fd, &ev ) == -1, "epoll add event error" );
 }
+*/
 
 std::vector<Channel*> Epoll::poll( int timeout )
 {
