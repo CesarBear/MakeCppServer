@@ -4,11 +4,12 @@
 
 class InetAddress
 {
-public:
+private:
     struct sockaddr_in addr;
 
     socklen_t addr_len;
 
+public:
     InetAddress();
     InetAddress( const char *ip, uint16_t port );
     ~InetAddress();

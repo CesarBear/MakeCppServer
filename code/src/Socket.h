@@ -17,6 +17,7 @@ public:
     void setnonblocking();
 
     int accept(InetAddress*);
+    void conneet(InetAddress*);
 
     int getFd();
 };
