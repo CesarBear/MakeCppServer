@@ -10,7 +10,7 @@
 int main() {
     Socket *clnt_sock = new Socket();
     InetAddress *clnt_addr = new InetAddress("127.0.0.1", 8888);
-    clnt_sock->conneet(clnt_addr);
+    clnt_sock->connect(clnt_addr);
 
     int sockfd = clnt_sock->getFd();
 
