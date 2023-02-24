@@ -10,14 +10,12 @@
 #include <errno.h>
 
 Connection::Connection(EventLoop *_loop, Socket *_sock)
-    : loop{_loop}, sock{_sock}, channel{nullptr}, inBuffer{new std::string()}, readBuffer{nullptr} {
+    : loop{_loop}, sock{_sock}, channel{nullptr}, readBuffer{nullptr} {
         channel = new Channel(loop, sock->getFd());
         channel->enableRead();
         channel->useET();
         std::function<void()> cb = std::bind(&Connection::echo, this, sock->getFd());
         channel->setReadCallback(cb);
-        channel->setUseThreadPool();
-
         readBuffer = new Buffer();
     }
 
@@ -56,6 +54,10 @@ void Connection::echo(int sockfd) {
         else if(bytes_read == 0)
         {
             printf("EOF, client fd %d disconnected\n", sockfd);
+            deleteConnectionCallback(sockfd);
+            break;
+        } else {
+            printf("Connection reset by peer\n");
             deleteConnectionCallback(sockfd);
             break;
         }

@@ -7,13 +7,13 @@ server:
 	-o server
 	
 client:
-	g++ code/src/util.cpp code/src/Buffer.cpp code/src/Socket.cpp code/src/InetAddress.cpp client.cpp -o client
+	g++ code/src/util.cpp code/src/Buffer.cpp code/src/Socket.cpp client.cpp -o client
 
 th:
 	g++ -pthread code/src/ThreadPool.cpp ThreadPoolTest.cpp -o ThreadPoolTest
 
 test:
-	g++ code/src/util.cpp code/src/Buffer.cpp code/src/Socket.cpp code/src/InetAddress.cpp code/src/ThreadPool.cpp \
+	g++ code/src/util.cpp code/src/Buffer.cpp code/src/Socket.cpp code/src/ThreadPool.cpp \
 	-pthread \
 	test.cpp -o test
 

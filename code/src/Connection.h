@@ -14,7 +14,6 @@ private:
     Socket *sock;
     Channel *channel;
     std::function<void(int)> deleteConnectionCallback;
-    std::string *inBuffer;
     Buffer *readBuffer;
 
 public:

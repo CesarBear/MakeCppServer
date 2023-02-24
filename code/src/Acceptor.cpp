@@ -2,7 +2,7 @@
 
 #include "Server.h"
 #include "Socket.h"
-#include "InetAddress.h"
+//#include "InetAddress.h"
 #include "Channel.h"
 
 #include <iostream>
@@ -19,7 +19,6 @@ Acceptor::Acceptor(EventLoop *_loop) : loop{_loop}, sock{nullptr}, acceptChannel
     std::function<void()> cb = std::bind(&Acceptor::acceptConnection, this);
     acceptChannel->setReadCallback(cb);
     acceptChannel->enableRead();
-    acceptChannel->setUseThreadPool(false);
     delete addr;
 }
 
@@ -33,8 +32,8 @@ void Acceptor::acceptConnection() {
     Socket *clnt_sock = new Socket(sock->accept(clnt_addr));
     printf("new client fd %d! IP: %s Port: %d\n", 
         clnt_sock->getFd(), 
-        inet_ntoa(clnt_addr->getAddr().sin_addr),
-        ntohs(clnt_addr->getAddr().sin_port));
+        clnt_addr->getIp(),
+        clnt_addr->getPort());
     clnt_sock->setnonblocking();
     newConnectionCallback(clnt_sock);
     delete clnt_addr;

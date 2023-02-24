@@ -17,7 +17,7 @@ private:
     bool stop;
 
 public:
-    ThreadPool(int size = 10);
+    ThreadPool(int size = std::thread::hardware_concurrency());
     ~ThreadPool();
 
     template<class F, class... Args>

@@ -4,7 +4,6 @@
 #include <functional>
 #include "code/src/util.h"
 #include "code/src/Buffer.h"
-#include "code/src/InetAddress.h"
 #include "code/src/Socket.h"
 #include "code/src/ThreadPool.h"
 
