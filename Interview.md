@@ -32,7 +32,7 @@
   * Reinforce why you're a good fit for the role  
 
    > As someone who has been parctising C++ for the past year, I look forward to applying the concepts I have learned in my Robotics classes in real-life situations.  
-   > This has further reinforced my interest in pursuing the embedded software developer as my internship.  
+   > This has further reinforced my interest in pursuing this workstudent position.  
    > My passion, combined with my international background, make me a strong asset to the software team at AED.  
 
 ## What is your biggest weakness  
