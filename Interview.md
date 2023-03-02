@@ -65,7 +65,10 @@
   3. How enthusiastic are you about the role
 
 > Well, as you can see, if I were hired for this job, this is exactly my first job. After going to school day by day for like 17 years, I want to apply those learnings in a more practical way and face challenges, then overcome them with a bunch of people  
-> In addition, I have watched the video about your winning of the innovation award of 2023, which left me a deep impression. With your products, people can lock and unlock their car as easily as unlocking their phone. That's amazing and cool!
+> In addition, I have watched the video about your winning of the innovation award of 2023, which left me a deep impression. With your products, people can lock and unlock their car as easily as unlocking their phone. That's amazing and cool!  
+> We all know that BrainLab is a company focusing on developing software-based technology of health care. And I believe health care is the area always in a rise.  
+> Regarding this position, it is pretty cool to dive into the whole cycle, from concepts to implementations and I want to bring my part into that.  
+> By the way, I also noticed that there are two bases in China, respectively in Hongkong and in Beijing. What a coincidence, I just live in Shenzhen City, where I can take bus to Hongkong. hhhh  
 > Regarding this position, I want to develop the same thing or even cooler with the whole team and bring my part to your side
 
 ## Where do you see yourself in 5 years?  
